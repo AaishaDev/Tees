@@ -231,8 +231,8 @@
        
   let products_in_cart = document.querySelector('.products_in_cart');
   let right = document.querySelector('.right');
-   tagName = ['blueshirt', 'pinkshirt', 'avengersshirt', 'whatevashirt', 'marvelshirt', 'peachshirt']
-   console.log(tagName)
+  //  tagName = ['blueshirt', 'pinkshirt', 'avengersshirt', 'whatevashirt', 'marvelshirt', 'peachshirt']
+  //  console.log(tagName)
 
         
         
@@ -330,9 +330,21 @@ if(Object.keys(Product).length!=0){
         cartshow(Product)
         };
             decrement[index].onclick = () => {
-       
+              if( Product[product.tag].inCart!=0){
               Product[product.tag].inCart--
+              localStorage.setItem("cartProducts", JSON.stringify(Product));}
+              else{
+                let ptag=product.tag;
+              console.log("ptag", ptag)
+              console.log(Product, "clicked this product", product.tag);
+              delete Product[ptag]
+              console.log("after delete", Product)
+
               localStorage.setItem("cartProducts", JSON.stringify(Product));
+              Product = localStorage.getItem("cartProducts");
+              Product = JSON.parse(Product);
+              cartshow(Product)
+              }
               
         console.log("dec clicked",index,  product.inCart, Product[product.tag].inCart, Product)
         cartshow(Product)
