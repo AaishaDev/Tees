@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script defer src="./script.js"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>cart</title>
+    <style>
+      @media screen and (max-width:900px){
+          .inside_container{
+            flex-direction: column;
+          }
+          .menu{
+    display: none !important;
+   }
+   @media screen and (max-width:400px){
+    html{
+      font-size: 10px;
+    }
+    .product_cart{
+      gap: 0.5rem !important;
+    }
+    img{
+      width: 30px;
+    }
+   }
+      }
+      .container {
+        max-width: 1200px;
+        margin: 1rem auto;
+        width: 85%;
+      }
+      .navbar {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 10px,
+          rgba(0, 0, 0, 0.23) 0px 3px 3px;
+      }
+      .container > p:nth-child(1) {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        /* identical to box height */
+
+        color: #1e1e1e;
+        padding: 2rem 0;
+      }
+      hr {
+        color: #d0cfcf;
+        height: 2px;
+      }
+      .inside_container {
+        display: flex;
+        justify-content: space-between;
+        flex: 1 1 100%;
+      }
+      .products_in_cart {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .product_cart {
+        display: flex;
+        gap: 3rem;
+        justify-content: space-between;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 5px;
+        border-radius: 8px;
+        align-items: center;
+        padding: 1rem 2rem 1rem 1rem;
+      }
+      .left > p:nth-child(1) {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 2rem 0 0.2rem;
+        /* identical to box height */
+
+        color: #1e1e1e;
+      }
+      .container p > a:nth-child(1) {
+        color: #1e1e1e;
+      }
+      .left > p:nth-child(2) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        /* identical to box height */
+
+        color: #1e1e1e;
+        font-family: "Poppins";
+        margin-bottom: 2rem;
+      }
+      .checkout_section {
+        background-color: #bb4747;
+        padding: 4rem 4rem 2rem 4rem;
+        color: white;
+        margin-top: 3rem;
+        border-radius: 20px;
+        width: 100%;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        color: #fefcfc;
+      }
+      .dflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .checkout {
+        background-color: #389797;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        gap: 2rem;
+      }
+      .increment {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        padding: 0.5rem;
+        background-color: #1e1e1e;
+        color: white;
+      }
+      .decrement {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        padding: 0.5rem;
+        color: white;
+        background-color: #1e1e1e;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="navbar">
+      <nav>
+        <div class="logo">
+          <img src="./images/Vector.png" alt="" />
+          <div class="logo_name">TEES</div>
+        </div>
+        <div class="dflex">
+          <div class="dflex menu">
+            <p>Home</p>
+            <p>About Us</p>
+          </div>
+          <div class="btn cart">
+            <a href="./cart.html">Cart</a>
+            <span id="cartValue">0</span>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <div class="container">
+      <p><a href="./index.html"> ← Shopping Continue</a></p>
+      <hr />
+      <div class="inside_container">
+        <div class="left">
+          <p>Shopping cart</p>
+          <!-- <p>You have <span id="cartValue">3</span> items in your cart</p> -->
+          <div class="products_in_cart">
+            <!-- <div class="product_cart">
+              <img src="./images/image 15.png" width="80px" alt="" />
+              <p class="product_name">Marvels Tshirt</p>
+              <div class="dflex">
+                <p class="product_no">1</p>
+                <div  class="dflex">
+                  <span class="increment">+</span>
+                  <span class="decrement">-</span>
+                </div>
+              </div>
+              <div class="product_price">$24</div>
+              <p class="remove">Remove</p>
+            </div>
+            <div class="product_cart">
+              <img src="./images/image 19.png" width="80" alt="" />
+              <p>Marvels Tshirt</p>
+              <div class="product_no dflex">
+                <p>1</p>
+                <div class="dflex">
+                  <span class="increment">+</span>
+                  <span class="decrement">-</span>
+                </div>
+              </div>
+              <div class="product_price">$24</div>
+              <p class="remove">Remove</p>
+            </div> -->
+          </div>
+        </div>
+        <div class="right">
+          <!-- <div class="checkout_section">
+            <div class="dflex">
+              <div>Sub Total</div>
+              <div class="subtotal">$1660</div>
+            </div>
+            <div class="dflex">
+              <div>Shipping</div>
+              <div>$0</div>
+            </div>
+            <div class="dflex">
+              <div>Total (Tax incl.)</div>
+              <div class="subtotal">$1660</div>
+            </div>
+            <div class="checkout dflex">
+              <div class="subtotal">$1660</div>
+              <div class="checkout_final">Checkout →</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    
+        
+
+    
+  let cartValue = document.querySelector('#cartValue')
+ 
+       
+  let products_in_cart = document.querySelector('.products_in_cart');
+  let right = document.querySelector('.right');
+   tagName = ['blueshirt', 'pinkshirt', 'avengersshirt', 'whatevashirt', 'marvelshirt', 'peachshirt']
+   console.log(tagName)
+
+        
+        
+  // console.log("getting allproduct", Object.keys(Product).length);
+  
+
+products_in_cart.innerHTML="";
+let increment='';
+let decrement='';
+
+
+
+const cartshow=()=>{
+  let cartItems = localStorage.getItem('cartItems');
+  cartItems=parseInt(cartItems)
+  let Product = localStorage.getItem("cartProducts");
+Product = JSON.parse(Product);
+let total =0;
+  
+  
+
+
+  
+    if(Product){
+      cartItems=0;
+      Object.values(Product).forEach(element => {
+  console.log( "products", element.inCart);
+  cartItems+= element.inCart;
+  console.log(cartItems, "cartItems")
+  localStorage.setItem('cartItems', cartItems)
+  cartValue.innerHTML=cartItems;
+
+  
+});
+      
+      products_in_cart.innerHTML="";
+        
+        Object.values(Product).map((item,index)=>{
+            
+                products_in_cart.innerHTML+=`<div class="product_cart">
+              <img src="./images/${item.tag}.png" width="80px" alt="" />
+              <p class="product_name">${item.name} </p>
+              <p>$${item.price}</p>
+              <div class="dflex">
+                <p class="product_no">${item.inCart}</p>
+                <div  class="dflex">
+                  <span class="increment">+</span>
+                  <span class="decrement">-</span>
+                </div>
+              </div>
+              <div class="product_price">$${item.price*item.inCart}</div>
+              <p class="remove">Remove</p>
+            </div>`
+            total+=item.price*item.inCart;
+
+        increment = document.querySelectorAll('.increment');
+        decrement = document.querySelectorAll('.decrement');
+        // product_no = document.querySelector('.product_no')
+        // product_price = document.querySelector('.product_price')
+
+       
+        
+    
+
+        })
+       
+        Object.values(Product).forEach((product,index) => {
+ 
+  
+            increment[index].onclick = () => {
+       
+              Product[product.tag].inCart++
+              localStorage.setItem("cartProducts", JSON.stringify(Product));
+              Product = localStorage.getItem("cartProducts");
+              Product = JSON.parse(Product);
+              
+        console.log("clicked",index,  product.inCart, Product[product.tag].inCart, Product);
+        cartshow(Product)
+        };
+            decrement[index].onclick = () => {
+       
+              Product[product.tag].inCart--
+              localStorage.setItem("cartProducts", JSON.stringify(Product));
+              
+        console.log("dec clicked",index,  product.inCart, Product[product.tag].inCart, Product)
+        cartshow(Product)
+        };
+    
+  
+
+            
+        });
+
+       
+
+       
+       
+       
+       
+        right.innerHTML=`<div class="checkout_section">
+            <div class="dflex">
+              <div>Sub Total</div>
+              <div class="subtotal">$${total}</div>
+            </div>
+            <div class="dflex">
+              <div>Shipping</div>
+              <div>$0</div>
+            </div>
+            <div class="dflex">
+              <div>Total (Tax incl.)</div>
+              <div class="subtotal">$${total+2}</div>
+            </div>
+            <div class="checkout dflex">
+              <div class="subtotal">$${total+2}</div>
+              <div class="checkout_final">Checkout →</div>
+            </div>`
+
+            // subtotal= document.querySelectorAll('.subtotal')
+     
+
+
+    }
+
+else{
+  products_in_cart.innerHTML=`<h1>You have no items in cart</h1>`;
+
+
+}
+} 
+cartshow();
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

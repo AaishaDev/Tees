@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.dflex{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.all_section{
+    display: flex;
+    /* gap: 2.5rem; */
+    flex-direction: column;
+}
+.second{
+    display: none;
+}
+nav,.hero,.why,.affordable{
+    max-width: 1200px;
+    margin: auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.logo div{
+    font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 37px;
+letter-spacing: 0.02em;
+
+color: #BB4747;
+
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    
+}
+.menu p{
+    margin: 1.5rem;
+    color: #BB4747;
+    font-family: 'Poppins';
+}
+.cart{
+    margin: 1.5rem 0;
+}
+.btn{
+    background: #BB4747;
+border: 1px solid #CD326A;
+border-radius: 10px;
+padding: 0.37rem 2rem;
+color: white;
+}
+button{
+    padding: 0.6rem 4.5rem !important;
+
+}
+.hero_section{
+    background: linear-gradient(270.57deg, #D9D9D9 0.49%, #BEBEBC 98.74%);
+
+}
+
+.hero_left>p:nth-child(1){
+    font-family: 'Frank Ruhl Libre';
+font-style: normal;
+font-weight: 900;
+font-size: 2.5rem;
+line-height: 135%;
+/* identical to box height, or 135% */
+
+letter-spacing: 0.2em;
+
+color: #BB4747;
+
+}
+.hero_left>p:nth-child(2){
+    font-family: 'Frank Ruhl Libre';
+font-style: normal;
+font-weight: 900;
+font-size: 3.18rem;
+line-height: 106%;
+color: #424141;
+
+}
+.hero_left>p:nth-child(3){
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 1rem;
+line-height: 169%;
+margin: 0.5rem auto 1rem auto;
+
+
+color: #373636;
+
+}
+.why_section{
+    padding: 2.5rem 0;
+}
+.why{
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.why>p:nth-child(1){
+    font-weight: 400;
+font-size: 2rem;
+line-height:3.12rem;
+/* identical to box height */
+
+letter-spacing: 0.02em;
+
+color: #353535;
+
+}
+.reasons{
+    display: flex;
+    /* justify-content: space-between; */
+    text-align: center;
+    gap: 2.5rem;
+}
+.reasons div{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+background: #973838;
+width: 18rem;
+color: white;
+padding: 2rem 3rem;
+
+
+}
+
+.reasons div p:nth-child(2){
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 700;
+    font-size:1.5rem;
+    
+    letter-spacing: 0.02em;
+
+}
+.reasons div p:nth-child(3){
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 0.75rem;
+line-height: 142%;
+/* or 142% */
+
+text-align: center;
+
+
+}
+.affordable_section{
+    background: linear-gradient(270deg, #BEBEBC 0%, #DFDDDD 110.38%);
+}
+
+.affordable div:nth-child(2) p:nth-child(1){
+    font-family: 'Frank Ruhl Libre';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.18rem;
+    line-height: 106%;
+    color: #424141;
+
+}
+.affordable div:nth-child(2) p:nth-child(2){
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 1rem;
+line-height: 169%;
+/* or 169% */
+margin: 0.5rem 0 1rem 0;
+
+
+color: #373636;
+}
+.affordable div:nth-child(2) {
+    max-width: 45%;
+}
+.products{
+    max-width: 1200px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top:2.5rem;
+}
+.products span{
+    margin: 0  2rem 0 0;
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+line-height:1.2rem;
+/* identical to box height */
+
+letter-spacing: 0.115em;
+}
+.products span:nth-child(1){
+    font-style: normal;
+font-weight: 900;
+font-size: 1rem;
+line-height: 1.2rem;
+/* identical to box height */
+
+letter-spacing: 0.115em;
+}
+.our_products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.5rems;
+    grid-row-gap: 2rem; 
+}
+.add_to_cart:hover{
+    color: black !important;
+}
+
+.product_card div:nth-child(1) .add_to_cart{
+    width: 100%;
+    color: white;
+    background-color: #BB4794;
+    padding: 2rem ;
+    display: none;
+    position: absolute;
+    font-weight: 500;
+font-size: 1.25rem;
+bottom: 0;
+text-align: center;
+}
+.product_card div:nth-child(1){
+    position: relative;
+
+}
+.product_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+.product_card p:nth-child(3){
+    font-family: 'Frank Ruhl Libre';
+font-style: normal;
+font-weight: 700;
+font-size: 1rem;
+text-align: center;
+color: #34251F;
+
+}
+.testimonial_section{
+    background: #FFD8F2;
+    padding: 3rem 0;
+   
+}
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    gap: 3rem;
+}
+.testimonial p:nth-child(1){
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 3.12rem;
+    letter-spacing: 0.02em;
+    color: #353535;
+}
+.t_cards{
+    display: flex;
+    gap: 2rem;
+    /* flex: 1; */
+    justify-content: center;
+
+}
+.t_card{
+    background: #BB4794;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 25%;
+
+}
+.t_card img{
+    width: 110px;
+}
+.t_card p:nth-child(2){
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 1.12rem;
+line-height:1.75rem;
+letter-spacing: 0.02em;
+}
+.t_card p:nth-child(3){
+    font-style: normal;
+font-weight: 500;
+font-size: 0.75rem;
+line-height: 0.875rem;
+font-family: "Poppins";
+}
+footer{
+    background: #473030;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-family: "Poppins";
+}
+.product_card img:hover + .add_to_cart{
+    display: block !important;
+    cursor: pointer;
+
+}
+.products div:nth-child(1){
+    text-align: center;
+}
+@media screen and (max-width: 1170px) {
+    html{
+        font-size: 12px;
+    }
+    .product_card div:nth-child(1) img{
+        max-width: 300px;
+    }
+    
+}
+@media screen and (max-width:900px) {
+    html{
+        font-size: 14px;
+    }
+   
+    .hero  img{
+        width: 400px;
+        height: auto;
+    }
+    .affordable img{
+        width: 100%;
+        height: auto;
+    }
+    .our_products{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media screen and (max-width:700px)
+{
+    .hero  img{
+        width: 350px;
+        height: auto;
+    }
+    .t_card{
+        width:60%;
+        padding: 2.5rem 1.5rem;
+        margin: auto;
+    }
+    .reasons{
+        flex-direction: column;
+    }
+   
+}
+@media screen and (max-width:600px){
+    .html{
+        font-size: 16px;
+    }
+    .t_cards{
+       flex-direction: column;
+       width: 100%;
+    }
+    .testimonial{
+        align-content: center;
+    }
+    .our_products{
+        grid-template-columns: 1fr;
+    }
+   .hero{
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+   }
+   .first{
+    display: none;
+   }
+   .second{
+    display: block !important;
+   
+   }
+   .hero_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .menu{
+    display: none;
+   }
+   .affordable{
+    flex-direction: column-reverse;
+   }
+   .affordable div:nth-child(2) {
+    max-width: 100%;
+    text-align: center;
+    padding: 3rem 1.5rem;
+   font-size: 2.6rem;
+}
+.products span{
+    font-size: 8px;
+
+}
+
+.products span:nth-child(1){
+    font-size: 8px;
+}
+
+}
+@media screen and (max-width:350px){
+    .hero  img{
+        width: 250px;
+        height: auto;
+    }
+    .product_card div:nth-child(1) img{
+        width: 250px;
+    }
+    .logo div{
+        font-size: 18px;
+    }
+}
