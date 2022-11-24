@@ -242,6 +242,7 @@
 products_in_cart.innerHTML="";
 let increment='';
 let decrement='';
+let remove =""
 
 
 
@@ -253,10 +254,10 @@ Product = JSON.parse(Product);
 let total =0;
   
   
-
-
+console.log(Object.keys(Product).length, "check")
+products_in_cart.innerHTML=0;
   
-    if(Product){
+if(Object.keys(Product).length!=0){
       cartItems=0;
       Object.values(Product).forEach(element => {
   console.log( "products", element.inCart);
@@ -292,7 +293,7 @@ let total =0;
         decrement = document.querySelectorAll('.decrement');
         // product_no = document.querySelector('.product_no')
         // product_price = document.querySelector('.product_price')
-
+        remove = document.querySelectorAll('.remove');
        
         
     
@@ -301,7 +302,23 @@ let total =0;
        
         Object.values(Product).forEach((product,index) => {
  
-  
+
+            remove[index].onclick=()=>{
+              let ptag=product.tag;
+              console.log("ptag", ptag)
+              console.log(Product, "clicked this product", product.tag);
+              delete Product[ptag]
+              console.log("after delete", Product)
+
+              localStorage.setItem("cartProducts", JSON.stringify(Product));
+              Product = localStorage.getItem("cartProducts");
+              Product = JSON.parse(Product);
+              cartshow(Product)
+              
+
+              
+            }
+
             increment[index].onclick = () => {
        
               Product[product.tag].inCart++
@@ -358,6 +375,28 @@ let total =0;
 
 else{
   products_in_cart.innerHTML=`<h1>You have no items in cart</h1>`;
+  right.innerHTML=""
+  // products_in_cart.innerHTML="";
+  cartValue.innerHTML=0;
+  cartItems=0
+  localStorage.setItem('cartItems', cartItems)
+  let a =localStorage.getItem('cartItems', cartItems);
+  console.log(a,"cartitems")
+  Object.values(Product).forEach(element => {
+  console.log( "products", element.inCart);
+  cartItems+= element.inCart;
+  console.log(cartItems, "cartItems")
+  localStorage.setItem('cartItems', cartItems)
+  cartValue.innerHTML=cartItems;
+
+  let a =localStorage.getItem('cartItems', cartItems);
+  console.log(a,"cartitems")
+
+
+  
+});
+  
+ 
 
 
 }

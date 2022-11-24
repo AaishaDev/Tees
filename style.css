@@ -22,6 +22,12 @@ a{
 .second{
     display: none;
 }
+.navbar{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
 nav,.hero,.why,.affordable{
     max-width: 1200px;
     margin: auto;
@@ -55,6 +61,9 @@ color: #BB4747;
     margin: 1.5rem;
     color: #BB4747;
     font-family: 'Poppins';
+}
+.menu p:nth-child(2){
+    margin-right: 5rem;
 }
 .cart{
     margin: 1.5rem 0;
@@ -233,14 +242,15 @@ letter-spacing: 0.115em;
 }
 .add_to_cart:hover{
     color: black !important;
+    display: block;
 }
 
 .product_card div:nth-child(1) .add_to_cart{
     width: 100%;
     color: white;
     background-color: #BB4794;
-    padding: 2rem ;
-    display: none;
+    padding: 1.5rem ;
+    /* display: none; */
     position: absolute;
     font-weight: 500;
 font-size: 1.25rem;
